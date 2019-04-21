@@ -1,0 +1,27 @@
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #0679B3;
+    position: absolute;
+    transition: all .5s;
+    &.active {
+        transform: rotate(180deg)
+    }
+    &.icon-center {
+        top: 14px;
+        margin-left: 4px;
+    }
+}
+
+.filterPanel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}

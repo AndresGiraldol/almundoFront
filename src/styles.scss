@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'assets/fonts/icons/icons';
+$primary: #002979;
+$warning: #FFBB00;
+$info: #0579B3;
+@import './node_modules/bootstrap/scss/bootstrap.scss';
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #F4F4F4;
+    max-width: 100%;
+    overflow-x: hidden;
+}

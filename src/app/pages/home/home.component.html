@@ -1,0 +1,24 @@
+<div class="row no-gutters">
+    <app-filter-panel class="col-md-3 col-sm-12"> </app-filter-panel>
+    <div class="col-md-9 col-sm-12">
+
+        <app-hotel-panel *ngFor="let hotel of hotels" [hotel]="hotel"></app-hotel-panel>
+
+        <!-- PAGINATOR -->
+        <div class="row my-4" *ngIf="numElePag < hotelService.totalHotels">
+            <div class="col-6 text-right">
+                <button [disabled]="since < numElePag" class="blue-button button-big" (click)="cambiarDesde(since - numElePag)">Anterior</button>
+            </div>
+            <div class="col-6 text-left">
+                <button [disabled]="(since + numElePag) >= hotelService.totalHotels" class="blue-button button-big" (click)="cambiarDesde(since + numElePag)">Siguiente</button>
+            </div>
+        </div>
+
+        <!-- MENSAJE DE ALERTA -->
+        <div class="alert alert-warning" *ngIf="hotelService.totalHotels === 0" role="alert">
+            Uy, no encontramos resultados
+        </div>
+    </div>
+</div>
+
+<app-loading [active]="active"></app-loading>

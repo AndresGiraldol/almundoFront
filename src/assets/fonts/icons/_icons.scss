@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Glyphter';
+    src: url('/assets/fonts/icons/icons.eot');
+    src: url('/assets/fonts/icons/icons.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/icons/icons.woff') format('woff'), url('/assets/fonts/icons/icons.ttf') format('truetype'), url('/assets/fonts/icons/icons.svg#Glyphter') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class*='icon-']:before {
+    display: inline-block;
+    font-family: 'Glyphter';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-star:before {
+    content: '\0041';
+}
+
+.icon-search:before {
+    content: '\0042';
+}
+
+.icon-coffe-maker:before {
+    content: '\0043';
+}
+
+.icon-deep-soaking-bathtub:before {
+    content: '\0044';
+}
+
+.icon-fitness-center:before {
+    content: '\0045';
+}
+
+.icon-garden:before {
+    content: '\0046';
+}
+
+.icon-kitchen-facilities:before {
+    content: '\0047';
+}
+
+.icon-newspaper:before {
+    content: '\0048';
+}
+
+.icon-nightclub:before {
+    content: '\0049';
+}
+
+.icon-restaurant:before {
+    content: '\004a';
+}
+
+.icon-safety-box:before {
+    content: '\004b';
+}
+
+.icon-separate-bredroom:before {
+    content: '\004c';
+}
+
+.icon-sheets:before {
+    content: '\004d';
+}
+
+.icon-bathrobes:before {
+    content: '\004e';
+}
+
+.icon-bathtub:before {
+    content: '\004f';
+}
+
+.icon-beach:before {
+    content: '\0050';
+}
+
+.icon-beach-pool-facilities:before {
+    content: '\0051';
+}
+
+.icon-business-center:before {
+    content: '\0052';
+}
+
+.icon-children-club:before {
+    content: '\0053';
+}

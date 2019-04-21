@@ -1,0 +1,37 @@
+<div class="row m-0">
+    <div class="card col-12 mb-2">
+        <div class="row">
+            <div class="col-md-3 col-sm-12 p-2">
+                <img class="w-100" [src]="hotel.image" alt="Imagen del hotel">
+            </div>
+            <div class="col-md-6 col-sm-12 p-2">
+                <b class="mb-1 blue-label">{{ hotel.name }}</b>
+                <ul class="list-unstyled list-group list-group-horizontal">
+                    <li *ngFor="let i of Arr(hotel.stars).fill(1)" class="mr-1">
+                        <i class="icon-star yellow"></i>
+                    </li>
+                </ul>
+                <ul class="list-unstyled list-group list-group-horizontal">
+                    <li *ngFor="let amenittes of hotel.amenities" class="m-1">
+                        <i style="color: #444444" [ngClass]="amenittes"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-12 p-2">
+                <div class="price-box text-center">
+                    <div class="price-box-text">
+                        <small>Precio por noche por</small>
+                        <small class="d-block">Habitación</small>
+                    </div>
+                    <div class="price-box-container mt-1">
+                        <span class="price-symbol">ARS&nbsp;</span>
+                        <span class="price">{{hotel.price}}</span>
+                        <p>
+                            <button class="mt-2 button-big blue-button">Ver hotel</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

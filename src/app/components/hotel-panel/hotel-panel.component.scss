@@ -1,0 +1,39 @@
+// position: absolute;
+// left: 0;
+// top: 16px;
+// content: '';
+// display: block;
+// width: 1px;
+// border-left: 1px dashed #ccc;
+// height: calc(100% - 32px);
+// }
+.price-box {
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 16px;
+        content: '';
+        display: block;
+        width: 1px;
+        border-left: 1px dashed #ccc;
+        height: calc(100% - 32px);
+    }
+}
+
+.button-big {
+    padding: 3px 35px 3px 35px;
+}
+
+.price {
+    line-height: 1.75rem;
+    font-size: 2rem;
+    font-weight: 700;
+    display: inline-block;
+    color: #E3730F;
+}
+
+.price-symbol {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #E3730F;
+}

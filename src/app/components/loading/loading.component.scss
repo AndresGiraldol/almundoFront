@@ -1,0 +1,15 @@
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    &.active {
+        display: block;
+        opacity: 1;
+    }
+}

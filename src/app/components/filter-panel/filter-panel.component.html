@@ -1,0 +1,66 @@
+<div class="row m-0">
+    <div class="col-12 p-0">
+        <div class="filterPanel">
+            <b class="m-2 d-none d-md-block">Filtros</b>
+            <label (click)="displayFilters = !displayFilters" class="m-0 p-2 d-block d-md-none text-info text-center">
+                <b>Filtrar</b>
+                <i [ngClass]="{'active': !displayFilters}" class="arrow-up icon-center"></i>
+            </label>
+
+            <div [ngClass]="{'d-none d-md-flex': !displayFilters}" class="row m-0 p-0">
+                <div class="col-12 p-0">
+                    <div class="row m-0">
+                        <div class="col-8">
+                            <label class="m-2 text-info"><i class="icon-search"></i> <b class="ml-2">Nombre de hotel</b></label>
+                        </div>
+                        <div class="col-3 m-2 text-right" (click)="displayName = !displayName">
+                            <i [ngClass]="{'active': !displayName}" class="arrow-up"></i>
+                        </div>
+                    </div>
+                    <form [ngClass]="{'d-none d-md-flex': !displayName}" class="row m-0" (ngSubmit)="activeFilter()">
+                        <div class="form-group col-md-7 col-sm-12 mb-2 mx-2 p-0">
+                            <input [(ngModel)]="hotelName" name="hotelName" type="text" class="form-control" placeholder="Ingrese el nombre del hotel">
+                        </div>
+                        <div class="text-center from-group ml-3 col-md-3 col-sm-12 p-0">
+                            <button type="submit" class="btn btn-primary mb-2">Aceptar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div [ngClass]="{'d-none d-md-flex': !displayFilters}" class="row m-0 p-0">
+                <div class="col-12 p-0">
+                    <div class="row m-0">
+                        <div class="col-8">
+                            <label class="m-2 text-info"><i class="icon-star"></i> <b class="ml-2">Estrellas</b></label>
+                        </div>
+                        <div class="col-3 m-2 text-right" (click)="displayStars = !displayStars">
+                            <i [ngClass]="{'active': !displayStars}" class="arrow-up"></i>
+                        </div>
+                    </div>
+                    <div [ngClass]="{'d-none d-md-flex': !displayStars}">
+                        <div class="row m-0 mt-1">
+                            <div class="col-sm ml-2">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" disabled checked [(ngModel)]="allStars" class="form-check-input" id="allStars">
+                                    <label class="form-check-label" for="allStars"><b>Todas las estrellas</b></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row m-0" *ngFor="let stars of starsFilterArray">
+                            <div class="col-sm ml-2">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" (change)="activeFilter()" value="{{stars.value}}" [(ngModel)]="stars.checked" class="form-check-input" attr.id="stars-{{stars.value}}">
+                                    <label class="form-check-label" for="fiveStars">
+                                    <i class="icon-star text-warning mr-1" *ngFor="let i of Arr(stars.value).fill(1)"></i>
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
