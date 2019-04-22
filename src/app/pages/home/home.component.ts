@@ -1424,7 +1424,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this.getAllHotels(this.since , this.numElePag);
+    // this.getAllHotels(this.since , this.numElePag);
     this.hotelService.nameChange.subscribe(data => {
       this.numElePag = 4;
       this.since = 0;
