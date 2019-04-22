@@ -1,16 +1,16 @@
-<div class="row no-gutters">
-    <app-filter-panel class="col-md-3 col-sm-12"> </app-filter-panel>
-    <div class="col-md-9 col-sm-12">
+<div class="row no-gutters p-lg-3">
+    <app-filter-panel class="col-lg-3 col-sm-12"> </app-filter-panel>
+    <div class="col-lg-9 col-sm-12 p-2 pr-lg-0 py-lg-0">
 
         <app-hotel-panel *ngFor="let hotel of hotels" [hotel]="hotel"></app-hotel-panel>
 
         <!-- PAGINATOR -->
-        <div class="row my-4" *ngIf="numElePag < hotelService.totalHotels">
+        <div class="row mx-0 my-4" *ngIf="numElePag < hotelService.totalHotels">
             <div class="col-6 text-right">
-                <button [disabled]="since < numElePag" class="blue-button button-big" (click)="cambiarDesde(since - numElePag)">Anterior</button>
+                <button [disabled]="since < numElePag" class="btn btn-primary" (click)="cambiarDesde(since - numElePag)">Anterior</button>
             </div>
             <div class="col-6 text-left">
-                <button [disabled]="(since + numElePag) >= hotelService.totalHotels" class="blue-button button-big" (click)="cambiarDesde(since + numElePag)">Siguiente</button>
+                <button [disabled]="(since + numElePag) >= hotelService.totalHotels" class="btn btn-primary" (click)="cambiarDesde(since + numElePag)">Siguiente</button>
             </div>
         </div>
 

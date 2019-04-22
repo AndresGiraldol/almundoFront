@@ -26,6 +26,9 @@ export class FilterPanelComponent implements OnInit {
   Arr = Array;
   allStars = true;
   hotelName: string = '';
+  displayFilters: boolean;
+  displayStars: boolean;
+  displayName: boolean;
 
   ngOnInit() {
   }

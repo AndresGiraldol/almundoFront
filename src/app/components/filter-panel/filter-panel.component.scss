@@ -6,12 +6,13 @@
     border-bottom: 10px solid #0679B3;
     position: absolute;
     transition: all .5s;
+    top: 18px;
+    right: 10px;
     &.active {
         transform: rotate(180deg)
     }
     &.icon-center {
         top: 14px;
-        margin-left: 4px;
     }
 }
 
