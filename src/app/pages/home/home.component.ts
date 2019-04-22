@@ -28,11 +28,11 @@ export class HomeComponent implements OnInit {
       this.since = 0;
       this.getAllHotels(this.since , this.numElePag);
     });
-    this.hotels.forEach( data => {
-      this.hotelService.addHotel(data).subscribe( resp => {
-        console.log('Data: ', resp);
-      });
-    });
+    // this.hotels.forEach( data => {
+    //   this.hotelService.addHotel(data).subscribe( resp => {
+    //     console.log('Data: ', resp);
+    //   });
+    // });
   }
 
   // Obtiene todos los hoteles y le agrega las rutas para las imagenes,
