@@ -17,3 +17,4 @@ Ejecuta `ng serve`. Navega a ` http://localhost:4200/`.
 
 ## Projecto desplegado 
 
+https://almundo-frontapp.herokuapp.com/#/
